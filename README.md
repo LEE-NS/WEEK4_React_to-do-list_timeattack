@@ -1,8 +1,7 @@
-# React + Vite
+# React : to-do list (time attack)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+스타일 없이 to-do list를 빠른 시간 안에 구현한다.
 
-Currently, two official plugins are available:
+## 부족한 점
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Update 기능의 로직은 filter가 아니라 map이다. (tasks 전체 상태를 업데이트 해서 set해야 한다)
