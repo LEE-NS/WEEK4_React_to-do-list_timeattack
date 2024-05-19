@@ -1,6 +1,6 @@
 import React from "react"
 
-const Task = ({ task, tasks, setTasks }) => {
+const TodoItem = ({ task, tasks, setTasks }) => {
   const { id, title, job, isDone } = task
   const removeTask = (id) => {
     const newTasks = tasks.filter((eachTask) => eachTask.id !== id)
@@ -27,4 +27,4 @@ const Task = ({ task, tasks, setTasks }) => {
   )
 }
 
-export default Task
+export default TodoItem

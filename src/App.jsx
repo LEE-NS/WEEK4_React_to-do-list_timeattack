@@ -1,6 +1,6 @@
 import { useState } from "react"
-import Form from "./components/Form"
-import Section from "./components/Section"
+import TodoForm from "./components/TodoForm"
+import TodoList from "./components/TodoList"
 import "./App.css"
 
 function App() {
@@ -9,9 +9,9 @@ function App() {
   return (
     <>
       <h1>to-do list</h1>
-      <Form tasks={tasks} setTasks={setTasks} />
-      <Section sectionName="working" tasks={tasks} setTasks={setTasks} />
-      <Section sectionName="done" tasks={tasks} setTasks={setTasks} />
+      <TodoForm tasks={tasks} setTasks={setTasks} />
+      <TodoList sectionName="working" tasks={tasks} setTasks={setTasks} />
+      <TodoList sectionName="done" tasks={tasks} setTasks={setTasks} />
     </>
   )
 }

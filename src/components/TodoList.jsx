@@ -1,7 +1,7 @@
 import React from "react"
-import Task from "./Task"
+import TodoItem from "./TodoItem"
 
-const Section = ({ sectionName, tasks, setTasks }) => {
+const TodoList = ({ sectionName, tasks, setTasks }) => {
   const working = tasks.filter((task) => task.isDone === false)
   const done = tasks.filter((task) => task.isDone === true)
 
@@ -11,7 +11,7 @@ const Section = ({ sectionName, tasks, setTasks }) => {
       <ul>
         {(sectionName === "working" ? working : done).map((task) => (
           <li key={task.id}>
-            <Task task={task} tasks={tasks} setTasks={setTasks} />
+            <TodoItem task={task} tasks={tasks} setTasks={setTasks} />
           </li>
         ))}
       </ul>
@@ -19,4 +19,4 @@ const Section = ({ sectionName, tasks, setTasks }) => {
   )
 }
 
-export default Section
+export default TodoList

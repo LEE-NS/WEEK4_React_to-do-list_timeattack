@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-const Form = ({ tasks, setTasks }) => {
+const TodoForm = ({ tasks, setTasks }) => {
   const [title, setTitle] = useState("")
   const [job, setJob] = useState("")
 
@@ -10,6 +10,9 @@ const Form = ({ tasks, setTasks }) => {
 
   const addTask = (e) => {
     e.preventDefault()
+    if (!title.trim() || !job.trim()) {
+      return alert("제목과 내용을 모두 입력하십시오")
+    }
     const newTask = {
       id: crypto.randomUUID(),
       title,
@@ -44,4 +47,4 @@ const Form = ({ tasks, setTasks }) => {
   )
 }
 
-export default Form
+export default TodoForm
